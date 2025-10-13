@@ -1,40 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uz">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AzLingo — Grammar</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="container">
-<header class="header">
-  <div class="brand">
-    <div class="logo">AZ</div>
-    <div>
-      <h1 class="title">AzLingo</h1>
-      <div class="small" style="color:var(--muted)">A1 → C1 Ingliz tili</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AzLingo — Grammar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./ChatGPT Image Oct 9, 2025, 02_19_13 PM.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="brand">
+          <div class="logo">AZ</div>
+          <div>
+            <h1 class="title">AzLingo</h1>
+            <div class="small" style="color: var(--muted)">
+              A1 → C1 Ingliz tili
+            </div>
+          </div>
+        </div>
+        <button id="hamb" class="hamb">☰</button>
+        <nav id="nav" class="nav">
+          <a href="index.html">Home</a>
+          <a href="grammar.html">Grammar</a>
+          <a href="vocabulary.html">Vocabulary</a>
+          <a href="test.html">Test</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+      <main>
+        <section class="card">
+          <h2>Darajani tanlang</h2>
+          <div id="levels" class="levels"></div>
+        </section>
+        <section class="card">
+          <h2>Mavzular</h2>
+          <div id="lessonsList"></div>
+        </section>
+        <section class="card">
+          <div id="lessonContent">Darajani tanlang va mavzuni bosing.</div>
+        </section>
+      </main>
+      <footer class="footer">© 2025 AzLingo</footer>
     </div>
-  </div>
-  <button id="hamb" class="hamb">☰</button>
-  <nav id="nav" class="nav">
-    <a href="index.html">Home</a>
-    <a href="grammar.html">Grammar</a>
-    <a href="vocabulary.html">Vocabulary</a>
-    <a href="test.html">Test</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-<main>
-
-<section class="card"><h2>Darajani tanlang</h2><div id="levels" class="levels"></div></section>
-<section class="card"><h2>Mavzular</h2><div id="lessonsList"></div></section>
-<section class="card"><div id="lessonContent">Darajani tanlang va mavzuni bosing.</div></section>
-
-</main>
-<footer class="footer">© 2025 AzLingo</footer>
-</div>
-<script src="data.js" defer></script>
-<script src="app.js" defer></script>
-</body>
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+  </body>
 </html>
