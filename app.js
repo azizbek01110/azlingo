@@ -51,15 +51,41 @@ document.addEventListener('DOMContentLoaded', function(){
       });
       content.innerHTML = '<p class="small">Darajani tanlang va mavzuni bosing.</p>';
     }
-    window.renderTopic = function(level, topic){
-      var g = getGrammar(level)[topic];
-      if(!g) return;
-      var html = '<h2>'+topic+' — '+level+'</h2><h3>Qoida (o\'zbekcha)</h3><p>'+g.rule_uz+'</p><h3>Structure</h3><p>'+g.structure+'</p><h3>Misollar</h3><ol>';
-      g.examples.forEach(function(e){ html += '<li><strong>'+e.en+'</strong> — '+e.uz+'</li>'; });
-      html += '</ol>';
-      content.innerHTML = html;
-      window.scrollTo({top:0, behavior:'smooth'});
+   window.renderTopic = function(level, topic){
+    var g = getGrammar(level)[topic];
+    if(!g) return;
+
+    // structure-ni stringga aylantirish
+    var structureStr = '';
+    if(typeof g.structure === 'object'){
+        if(Array.isArray(g.structure)){
+            structureStr = g.structure.join('<br>'); // array bo'lsa elementlarni br bilan ajratish
+        } else {
+            // object bo'lsa propertylarini chiqarish
+            for(var key in g.structure){
+                if(g.structure.hasOwnProperty(key)){
+                    structureStr += '<strong>' + key + '</strong>: ' + g.structure[key] + '<br>';
+                }
+            }
+        }
+    } else {
+        structureStr = g.structure; // string bo'lsa shunchaki ishlatish
     }
+
+    // HTML yaratish
+    var html = '<h2>' + topic + ' — ' + level + '</h2>' +
+               '<h3>Qoida (o\'zbekcha)</h3><p>' + g.rule_uz + '</p>' +
+               '<h3>Structure</h3><p>' + structureStr + '</p>' +
+               '<h3>Misollar</h3><ol>';
+
+    g.examples.forEach(function(e){
+        html += '<li><strong>' + e.en + '</strong> — ' + e.uz + '</li>';
+    });
+
+    html += '</ol>';
+    content.innerHTML = html;
+    window.scrollTo({top:0, behavior:'smooth'});
+}
   }
 
   if(page === 'vocabulary.html'){
