@@ -3517,9 +3517,931 @@ const AZ_DATA = {
   }
 }
 
+
+   },
+   "test":
+   {
+    A1: [
+       {
+      "question": "I ____ to school every day.",
+      "options": ["go", "goes", "going", "gone"],
+      "answer": "go",
+      "rule": "Present Simple - odatdagi ish-harakatlarni ifodalaydi."
+    },
+    {
+      "question": "She ____ coffee in the morning.",
+      "options": ["drink", "drinks", "drinking", "drank"],
+      "answer": "drinks",
+      "rule": "3-shaxs birlikda -s qo‘shimchasi qo‘shiladi."
+    },
+    {
+      "question": "They ____ football every weekend.",
+      "options": ["play", "plays", "playing", "played"],
+      "answer": "play",
+      "rule": "Ko‘plikda fe’l o‘zgarishsiz qoladi."
+    },
+    {
+      "question": "He doesn’t ____ meat.",
+      "options": ["eat", "eats", "ate", "eating"],
+      "answer": "eat",
+      "rule": "Inkor gapda 'doesn't + fe’lning asosiy shakli' ishlatiladi."
+    },
+    {
+      "question": "Do you ____ English?",
+      "options": ["speak", "speaks", "speaking", "spoken"],
+      "answer": "speak",
+      "rule": "Savol shakli: Do/Does + subject + verb."
+    },
+    {
+      "question": "My mother ____ in a hospital.",
+      "options": ["work", "works", "working", "worked"],
+      "answer": "works",
+      "rule": "3-shaxs birlikda fe’lga -s qo‘shimchasi qo‘shiladi."
+    },
+    {
+      "question": "We ____ lunch at 1 o’clock.",
+      "options": ["have", "has", "having", "had"],
+      "answer": "have",
+      "rule": "Ko‘plikda fe’lning oddiy shakli ishlatiladi."
+    },
+    {
+      "question": "He ____ his homework every evening.",
+      "options": ["do", "does", "doing", "done"],
+      "answer": "does",
+      "rule": "3-shaxs birlik uchun 'does' ishlatiladi."
+    },
+    {
+      "question": "They don’t ____ TV at night.",
+      "options": ["watch", "watches", "watching", "watched"],
+      "answer": "watch",
+      "rule": "Inkor gapda fe’l o‘zgarishsiz qoladi."
+    },
+    {
+      "question": "Does she ____ in London?",
+      "options": ["live", "lives", "living", "lived"],
+      "answer": "live",
+      "rule": "Savolda fe’lning oddiy shakli ishlatiladi."
+    },
+
+    // 2. Present Continuous
+    {
+      "question": "She ____ to music now.",
+      "options": ["listens", "is listening", "listening", "listen"],
+      "answer": "is listening",
+      "rule": "Present Continuous - hozirgi paytda bo‘layotgan ishni bildiradi."
+    },
+    {
+      "question": "I ____ my homework at the moment.",
+      "options": ["do", "am doing", "doing", "did"],
+      "answer": "am doing",
+      "rule": "Am/Is/Are + Verb+ing tuzilmasi ishlatiladi."
+    },
+    {
+      "question": "They ____ football right now.",
+      "options": ["are playing", "is playing", "play", "plays"],
+      "answer": "are playing",
+      "rule": "Ko‘plikda 'are' yordamchi fe’li ishlatiladi."
+    },
+    {
+      "question": "He ____ dinner at the moment.",
+      "options": ["cooks", "is cooking", "cooking", "cook"],
+      "answer": "is cooking",
+      "rule": "Hozirgi paytda bo‘layotgan harakat uchun 'is + V-ing'."
+    },
+    {
+      "question": "We ____ TV now.",
+      "options": ["are watching", "is watching", "watch", "watches"],
+      "answer": "are watching",
+      "rule": "'Are' + fe’l + ing ishlatiladi."
+    },
+    {
+      "question": "I ____ to you!",
+      "options": ["am talking", "talks", "talk", "is talking"],
+      "answer": "am talking",
+      "rule": "I bilan birga 'am' ishlatiladi."
+    },
+    {
+      "question": "She ____ her friends at the park.",
+      "options": ["is meeting", "meets", "meet", "meeting"],
+      "answer": "is meeting",
+      "rule": "Hozir sodir bo‘layotgan ish uchun 'is + ing'."
+    },
+    {
+      "question": "Are they ____ a movie?",
+      "options": ["watch", "watching", "watched", "watches"],
+      "answer": "watching",
+      "rule": "Savolda: Are + subject + verb+ing?"
+    },
+    {
+      "question": "He isn’t ____ to school today.",
+      "options": ["go", "goes", "going", "gone"],
+      "answer": "going",
+      "rule": "Inkor shakl: isn’t/aren’t + verb+ing."
+    },
+    {
+      "question": "What are you ____?",
+      "options": ["do", "doing", "does", "done"],
+      "answer": "doing",
+      "rule": "Savol: What + am/is/are + subject + doing?"
+    },
+
+    // 3. Past Simple
+    {
+      "question": "I ____ a movie yesterday.",
+      "options": ["see", "saw", "seen", "seeing"],
+      "answer": "saw",
+      "rule": "Past Simple - o‘tgan paytdagi harakat uchun ishlatiladi."
+    },
+    {
+      "question": "She ____ to the park last week.",
+      "options": ["go", "goes", "went", "gone"],
+      "answer": "went",
+      "rule": "Fe’lning 2-shakli ishlatiladi (go → went)."
+    },
+    {
+      "question": "They ____ at home yesterday.",
+      "options": ["was", "were", "are", "be"],
+      "answer": "were",
+      "rule": "Ko‘plik uchun 'were' ishlatiladi."
+    },
+    {
+      "question": "He ____ a book last night.",
+      "options": ["read", "reads", "reading", "red"],
+      "answer": "read",
+      "rule": "Fe’l shakli o‘zgarmaydi, talaffuzi o‘zgaradi."
+    },
+    {
+      "question": "Did you ____ your homework?",
+      "options": ["do", "does", "did", "done"],
+      "answer": "do",
+      "rule": "Savolda 'Did + subject + base verb' ishlatiladi."
+    },
+    {
+      "question": "We ____ in Tashkent in 2020.",
+      "options": ["live", "lived", "living", "lives"],
+      "answer": "lived",
+      "rule": "Fe’lga -ed qo‘shimchasi qo‘shiladi."
+    },
+    {
+      "question": "He didn’t ____ breakfast.",
+      "options": ["eat", "eats", "ate", "eating"],
+      "answer": "eat",
+      "rule": "Inkor gapda 'didn’t + base verb' ishlatiladi."
+    },
+    {
+      "question": "Where ____ you go yesterday?",
+      "options": ["did", "do", "done", "does"],
+      "answer": "did",
+      "rule": "Savol 'Did' bilan boshlanadi."
+    },
+    {
+      "question": "I ____ a new phone last month.",
+      "options": ["buy", "bought", "buys", "buying"],
+      "answer": "bought",
+      "rule": "Noaniq fe’llar 2-shaklga o‘zgaradi."
+    },
+    {
+      "question": "They ____ late to the meeting.",
+      "options": ["was", "were", "are", "be"],
+      "answer": "were",
+      "rule": "'They' bilan 'were' ishlatiladi."
+    },
+      {
+      "question": "I ____ swim very well.",
+      "options": ["can", "can't", "could", "am"],
+      "answer": "can",
+      "rule": "'Can' qobiliyat yoki imkoniyatni bildiradi."
+    },
+    {
+      "question": "He ____ drive a car.",
+      "options": ["can", "can't", "am", "is"],
+      "answer": "can't",
+      "rule": "Salbiy shakl: can't = cannot."
+    },
+    {
+      "question": "____ you speak English?",
+      "options": ["Can", "Do", "Are", "Will"],
+      "answer": "Can",
+      "rule": "Savol shaklida 'Can' oldinga chiqadi."
+    },
+    {
+      "question": "We ____ play football after school.",
+      "options": ["can", "are", "is", "do"],
+      "answer": "can",
+      "rule": "'Can' — umumiy imkoniyat uchun ishlatiladi."
+    },
+    {
+      "question": "She ____ ride a horse.",
+      "options": ["can", "can't", "does", "isn't"],
+      "answer": "can't",
+      "rule": "Salbiy shaklda 'can't' ishlatiladi."
+    },
+    {
+      "question": "I ____ cook Italian food.",
+      "options": ["can", "can't", "am", "do"],
+      "answer": "can",
+      "rule": "'Can' — malaka yoki qobiliyatni bildiradi."
+    },
+    {
+      "question": "____ you help me?",
+      "options": ["Can", "Do", "Is", "Are"],
+      "answer": "Can",
+      "rule": "Yordam so‘rash uchun 'Can you...?' ishlatiladi."
+    },
+    {
+      "question": "He ____ come to the party.",
+      "options": ["can't", "can", "does", "is"],
+      "answer": "can't",
+      "rule": "Imkoniyat yo‘qligini bildiradi."
+    },
+    {
+      "question": "I ____ play the guitar.",
+      "options": ["can", "can't", "is", "was"],
+      "answer": "can",
+      "rule": "'Can' – qobiliyat."
+    },
+    {
+      "question": "They ____ go outside now.",
+      "options": ["can't", "can", "are", "do"],
+      "answer": "can",
+      "rule": "'Can' – ruxsat yoki imkoniyat."
+    },
+
+    // === 5. There is / There are ===
+    {
+      "question": "____ a cat on the sofa.",
+      "options": ["There is", "There are", "It is", "They are"],
+      "answer": "There is",
+      "rule": "'There is' birlik uchun ishlatiladi."
+    },
+    {
+      "question": "____ two apples on the table.",
+      "options": ["There are", "There is", "It is", "They are"],
+      "answer": "There are",
+      "rule": "Ko‘plik uchun 'There are' ishlatiladi."
+    },
+    {
+      "question": "____ any milk in the fridge?",
+      "options": ["Is there", "Are there", "There is", "There are"],
+      "answer": "Is there",
+      "rule": "Savol shaklida 'Is there' – birlik uchun."
+    },
+    {
+      "question": "____ some people outside.",
+      "options": ["There are", "There is", "They are", "It is"],
+      "answer": "There are",
+      "rule": "Ko‘plik uchun 'There are' ishlatiladi."
+    },
+    {
+      "question": "There ____ a book on the desk.",
+      "options": ["is", "are", "be", "am"],
+      "answer": "is",
+      "rule": "'There is' – 1 ta narsa uchun."
+    },
+    {
+      "question": "There ____ many cars in the street.",
+      "options": ["are", "is", "am", "be"],
+      "answer": "are",
+      "rule": "Ko‘plik uchun 'are'."
+    },
+    {
+      "question": "____ any chairs here?",
+      "options": ["Are there", "Is there", "There is", "They are"],
+      "answer": "Are there",
+      "rule": "Ko‘plikda savol shakli 'Are there...?'"
+    },
+    {
+      "question": "There ____ no water in the bottle.",
+      "options": ["is", "are", "be", "am"],
+      "answer": "is",
+      "rule": "Birlik uchun 'is'."
+    },
+    {
+      "question": "____ a problem with my computer.",
+      "options": ["There is", "There are", "It are", "They are"],
+      "answer": "There is",
+      "rule": "'There is' – muammo, joy, narsa haqida gap ketganda."
+    },
+    {
+      "question": "There ____ a lot of students in class.",
+      "options": ["are", "is", "be", "am"],
+      "answer": "are",
+      "rule": "'There are' – ko‘plikdagi otlar bilan."
+    },
+
+    // === 6. Articles (a, an, the) ===
+    {
+      "question": "I have ____ apple.",
+      "options": ["a", "an", "the", "-"],
+      "answer": "an",
+      "rule": "'An' unli harf bilan boshlangan so‘zlardan oldin ishlatiladi."
+    },
+    {
+      "question": "She has ____ cat.",
+      "options": ["a", "an", "the", "-"],
+      "answer": "a",
+      "rule": "'A' – birinchi marta eslatilayotgan narsa uchun."
+    },
+    {
+      "question": "____ sun is very hot today.",
+      "options": ["A", "An", "The", "-"],
+      "answer": "The",
+      "rule": "'The' – ma’lum narsani bildiradi."
+    },
+    {
+      "question": "I saw ____ old man in the park.",
+      "options": ["a", "an", "the", "-"],
+      "answer": "an",
+      "rule": "'An' – unli harf bilan boshlangan so‘z oldida."
+    },
+    {
+      "question": "Can you open ____ window?",
+      "options": ["a", "an", "the", "-"],
+      "answer": "the",
+      "rule": "'The' – so‘zlovchi va tinglovchiga ma’lum bo‘lgan narsa uchun."
+    },
+    {
+      "question": "He bought ____ car yesterday.",
+      "options": ["a", "an", "the", "-"],
+      "answer": "a",
+      "rule": "'A' – noaniq birlik uchun."
+    },
+    {
+      "question": "We live near ____ river.",
+      "options": ["a", "an", "the", "-"],
+      "answer": "a",
+      "rule": "Daryo nomi umumiy bo‘lsa – 'a'."
+    },
+    {
+      "question": "____ Earth goes around the Sun.",
+      "options": ["A", "An", "The", "-"],
+      "answer": "The",
+      "rule": "Yagona narsalar oldidan 'the' ishlatiladi."
+    },
+    {
+      "question": "I read ____ interesting book.",
+      "options": ["a", "an", "the", "-"],
+      "answer": "an",
+      "rule": "'An' – unli bilan boshlangan so‘z uchun."
+    },
+    {
+      "question": "She is ____ best student.",
+      "options": ["a", "an", "the", "-"],
+      "answer": "the",
+      "rule": "Superlativ daraja oldida 'the' ishlatiladi."
+    },
+
+    // === 7. Prepositions of Place ===
+    {
+      "question": "The cat is ____ the table.",
+      "options": ["on", "in", "under", "behind"],
+      "answer": "on",
+      "rule": "'On' – ustida joylashgan narsa uchun ishlatiladi."
+    },
+    {
+      "question": "The ball is ____ the box.",
+      "options": ["in", "on", "under", "between"],
+      "answer": "in",
+      "rule": "'In' – ichida joylashgan narsani bildiradi."
+    },
+    {
+      "question": "The dog is ____ the chair.",
+      "options": ["under", "on", "in", "behind"],
+      "answer": "under",
+      "rule": "'Under' – pastida joylashgan narsa."
+    },
+    {
+      "question": "The picture is ____ the wall.",
+      "options": ["on", "in", "under", "between"],
+      "answer": "on",
+      "rule": "'On the wall' – devorga osilgan narsalar uchun."
+    },
+    {
+      "question": "The car is ____ the house.",
+      "options": ["behind", "in front of", "under", "on"],
+      "answer": "behind",
+      "rule": "'Behind' – orqasida joylashgan narsani bildiradi."
+    },
+    {
+      "question": "The park is ____ the school and the bank.",
+      "options": ["between", "behind", "in front of", "under"],
+      "answer": "between",
+      "rule": "'Between' – ikki narsa orasida joylashgan."
+    },
+    {
+      "question": "The post office is ____ the cinema.",
+      "options": ["next to", "behind", "under", "on"],
+      "answer": "next to",
+      "rule": "'Next to' – yonida joylashgan narsa."
+    },
+    {
+      "question": "My bag is ____ the floor.",
+      "options": ["on", "under", "in", "behind"],
+      "answer": "on",
+      "rule": "'On the floor' – ustida joylashgan narsa."
+    },
+    {
+      "question": "There is a park ____ my house.",
+      "options": ["near", "behind", "in", "on"],
+      "answer": "near",
+      "rule": "'Near' – yaqinida joylashgan narsani bildiradi."
+    },
+    {
+      "question": "The ball is ____ the two boxes.",
+      "options": ["between", "under", "on", "in"],
+      "answer": "between",
+      "rule": "‘Between’ – ikki narsa orasida."
+    }
+    ]
+    ,
+    A2: [
+      {
+    "question": "I ____ reading a book when you called.",
+    "options": ["was", "am", "is", "were"],
+    "answer": "was",
+    "rule": "Past Continuous – o'tmishda davom etayotgan harakatni bildiradi."
+  },
+  {
+    "question": "She ____ just left the house.",
+    "options": ["has", "have", "had", "was"],
+    "answer": "has",
+    "rule": "Present Perfect – hozirgacha natijasi mavjud bo‘lgan harakat."
+  },
+  {
+    "question": "They ____ not watching TV when I arrived.",
+    "options": ["were", "was", "are", "is"],
+    "answer": "were",
+    "rule": "Inkor: were not (weren’t) + V-ing shaklida yoziladi."
+  },
+  {
+    "question": "I ____ going to visit my grandmother tomorrow.",
+    "options": ["am", "was", "be", "is"],
+    "answer": "am",
+    "rule": "'Going to' – kelajakdagi reja yoki niyatni bildiradi."
+  },
+  {
+    "question": "You ____ study for the exam.",
+    "options": ["must", "can", "should", "might"],
+    "answer": "must",
+    "rule": "'Must' – majburiyatni bildiradi."
+  },
+  {
+    "question": "My house is ____ than yours.",
+    "options": ["bigger", "biggest", "more big", "most big"],
+    "answer": "bigger",
+    "rule": "Comparative darajada '-er' qo‘shimchasi ishlatiladi."
+  },
+  {
+    "question": "Mount Everest is the ____ mountain in the world.",
+    "options": ["highest", "higher", "more high", "most high"],
+    "answer": "highest",
+    "rule": "Superlative daraja uchun 'the + -est' ishlatiladi."
+  },
+  {
+    "question": "He ____ sleeping when the phone rang.",
+    "options": ["was", "were", "is", "be"],
+    "answer": "was",
+    "rule": "Past Continuousda davom etayotgan harakatni bildiradi."
+  },
+  {
+    "question": "I ____ finished my homework already.",
+    "options": ["have", "has", "had", "am"],
+    "answer": "have",
+    "rule": "Present Perfect – 'have/has + V3' shaklida ishlatiladi."
+  },
+  {
+    "question": "We ____ not going to buy a new car.",
+    "options": ["are", "is", "was", "were"],
+    "answer": "are",
+    "rule": "'Going to' bilan reja bildiradi: 'be + going to + V'."
+  },
+  {
+    "question": "He ____ eat more vegetables.",
+    "options": ["should", "can", "might", "must"],
+    "answer": "should",
+    "rule": "'Should' – maslahat bildiradi."
+  },
+  {
+    "question": "They ____ playing football all afternoon.",
+    "options": ["were", "was", "are", "is"],
+    "answer": "were",
+    "rule": "Past Continuous – o'tmishda davom etgan harakat."
+  },
+  {
+    "question": "She ____ never been to Paris.",
+    "options": ["has", "have", "had", "is"],
+    "answer": "has",
+    "rule": "Present Perfectda 'has' birlik uchun ishlatiladi."
+  },
+  {
+    "question": "I’m ____ to start a new project next week.",
+    "options": ["going", "go", "went", "gone"],
+    "answer": "going",
+    "rule": "'Be going to' – rejalashtirilgan kelajakni bildiradi."
+  },
+  {
+    "question": "This book is ____ than that one.",
+    "options": ["more interesting", "interestinger", "most interesting", "interesting"],
+    "answer": "more interesting",
+    "rule": "Uzun sifatlarda 'more + adjective' ishlatiladi."
+  },
+  {
+    "question": "I ____ help you if you need.",
+    "options": ["can", "must", "should", "might"],
+    "answer": "can",
+    "rule": "'Can' – imkoniyat yoki ruxsat bildiradi."
+  },
+  {
+    "question": "We ____ having dinner when you arrived.",
+    "options": ["were", "was", "are", "is"],
+    "answer": "were",
+    "rule": "Past Continuous – 'was/were + V-ing' shaklida."
+  },
+  {
+    "question": "He ____ just finished his work.",
+    "options": ["has", "have", "had", "is"],
+    "answer": "has",
+    "rule": "Present Perfect – yaqinda tugagan ishni bildiradi."
+  },
+  {
+    "question": "I ____ not going to stay here tonight.",
+    "options": ["am", "is", "are", "was"],
+    "answer": "am",
+    "rule": "'Be going to' inkor shakli: am not/isn’t/aren’t going to."
+  },
+  {
+    "question": "You ____ be late for class!",
+    "options": ["must not", "should", "can", "might"],
+    "answer": "must not",
+    "rule": "'Must not' – qat’iy taqiqlashni bildiradi."
+  },
+    {
+    "question": "If it ____ tomorrow, we will stay at home.",
+    "options": ["rains", "rain", "rained", "raining"],
+    "answer": "rains",
+    "rule": "First Conditional – 'if + Present Simple, will + V' shaklida ishlatiladi."
+  },
+  {
+    "question": "She ____ to music when I entered the room.",
+    "options": ["was listening", "listened", "is listening", "listens"],
+    "answer": "was listening",
+    "rule": "Past Continuous – o'tmishda davom etayotgan harakat."
+  },
+  {
+    "question": "I ____ already eaten breakfast.",
+    "options": ["have", "has", "had", "am"],
+    "answer": "have",
+    "rule": "Present Perfect – 'have/has + V3' shaklida yoziladi."
+  },
+  {
+    "question": "They ____ not go to the party yesterday.",
+    "options": ["did", "do", "does", "were"],
+    "answer": "did",
+    "rule": "Past Simple inkor shakli: 'did not (didn’t) + V1'."
+  },
+  {
+    "question": "My brother ____ swim when he was five.",
+    "options": ["could", "can", "should", "might"],
+    "answer": "could",
+    "rule": "'Could' – o'tmishda qobiliyatni bildiradi."
+  },
+  {
+    "question": "We ____ to visit our grandparents next week.",
+    "options": ["are going", "will", "was", "be"],
+    "answer": "are going",
+    "rule": "'Be going to' – kelajakdagi reja yoki niyat."
+  },
+  {
+    "question": "She ____ her homework before dinner.",
+    "options": ["finished", "has finished", "finishes", "finish"],
+    "answer": "finished",
+    "rule": "Past Simple – o'tgan zamonda tugagan ishni bildiradi."
+  },
+  {
+    "question": "You ____ smoke here. It’s forbidden.",
+    "options": ["must not", "should", "can", "might"],
+    "answer": "must not",
+    "rule": "'Must not' – qat’iy taqiqlashni bildiradi."
+  },
+  {
+    "question": "I ____ my phone yesterday.",
+    "options": ["lost", "have lost", "lose", "loses"],
+    "answer": "lost",
+    "rule": "Past Simple – kechagi voqealar uchun ishlatiladi."
+  },
+  {
+    "question": "It’s too cold. You ____ wear a jacket.",
+    "options": ["should", "must", "might", "could"],
+    "answer": "should",
+    "rule": "'Should' – maslahat yoki tavsiya."
+  },
+  {
+    "question": "He ____ ever been to London before.",
+    "options": ["hasn't", "didn't", "wasn't", "isn't"],
+    "answer": "hasn't",
+    "rule": "Present Perfect inkor shakli: 'hasn't/haven’t + V3'."
+  },
+  {
+    "question": "They ____ dinner when we arrived.",
+    "options": ["were having", "had", "are having", "have"],
+    "answer": "were having",
+    "rule": "Past Continuous – o'tmishda davom etayotgan harakat."
+  },
+  {
+    "question": "If I ____ enough money, I will buy a new car.",
+    "options": ["have", "had", "has", "having"],
+    "answer": "have",
+    "rule": "First Conditional – hozirgi zamon + will."
+  },
+  {
+    "question": "She ____ go to bed late on weekdays.",
+    "options": ["doesn't", "don't", "isn't", "wasn't"],
+    "answer": "doesn't",
+    "rule": "Present Simple inkor shakli: 'doesn't + V1'."
+  },
+  {
+    "question": "They ____ studying English for two years.",
+    "options": ["have been", "has been", "are", "were"],
+    "answer": "have been",
+    "rule": "Present Perfect Continuous – davom etayotgan harakatni bildiradi."
+  },
+  {
+    "question": "He ____ to the gym every morning.",
+    "options": ["goes", "go", "went", "is going"],
+    "answer": "goes",
+    "rule": "Present Simple – odatdagi harakatlarni bildiradi."
+  },
+  {
+    "question": "You ____ pay attention in class.",
+    "options": ["must", "might", "can", "should"],
+    "answer": "must",
+    "rule": "'Must' – majburiyatni bildiradi."
+  },
+  {
+    "question": "We ____ a lot of interesting places last summer.",
+    "options": ["visited", "visit", "visiting", "visits"],
+    "answer": "visited",
+    "rule": "Past Simple – o'tgan davr voqealari uchun."
+  },
+  {
+    "question": "I ____ never seen such a beautiful sunset.",
+    "options": ["have", "has", "had", "am"],
+    "answer": "have",
+    "rule": "Present Perfect – hayot davomida bo‘lgan tajriba."
+  },
+  {
+    "question": "She ____ not going to come tonight.",
+    "options": ["is", "are", "was", "be"],
+    "answer": "is",
+    "rule": "'Be going to' inkor shakli: isn’t/aren’t going to."
+  },
+   {
+    "question": "While I ____ TV, my mom was cooking dinner.",
+    "options": ["was watching", "watched", "am watching", "watch"],
+    "answer": "was watching",
+    "rule": "Past Continuous – o'tmishda ikki harakat bir vaqtda bo‘lganida ishlatiladi."
+  },
+  {
+    "question": "He ____ just finished his homework.",
+    "options": ["has", "have", "had", "is"],
+    "answer": "has",
+    "rule": "Present Perfect – yaqinda tugagan ishni bildiradi."
+  },
+  {
+    "question": "They ____ not going to travel this summer.",
+    "options": ["are", "is", "was", "were"],
+    "answer": "are",
+    "rule": "'Be going to' – kelajakdagi reja: are + going to + V."
+  },
+  {
+    "question": "You ____ be quiet during the movie.",
+    "options": ["must", "can", "should", "might"],
+    "answer": "must",
+    "rule": "'Must' – zarurat yoki majburiyatni bildiradi."
+  },
+  {
+    "question": "This test is ____ than the previous one.",
+    "options": ["easier", "more easy", "most easy", "easyer"],
+    "answer": "easier",
+    "rule": "Comparative – qisqa sifatlarga '-er' qo‘shiladi."
+  },
+  {
+    "question": "She ____ ever been to the USA.",
+    "options": ["has", "have", "had", "is"],
+    "answer": "has",
+    "rule": "Present Perfect – tajriba haqida gapirganda ishlatiladi."
+  },
+  {
+    "question": "We ____ dinner when he came in.",
+    "options": ["were having", "had", "are having", "was having"],
+    "answer": "were having",
+    "rule": "Past Continuous – o'tmishda davom etayotgan ishni bildiradi."
+  },
+  {
+    "question": "He ____ going to take the exam next week.",
+    "options": ["is", "are", "was", "be"],
+    "answer": "is",
+    "rule": "'Be going to' – kelajakdagi reja yoki niyatni bildiradi."
+  },
+  {
+    "question": "You ____ eat too much junk food.",
+    "options": ["shouldn't", "must", "can", "might"],
+    "answer": "shouldn't",
+    "rule": "'Shouldn't' – maslahat tarzida inkor ma’nosida ishlatiladi."
+  },
+  {
+    "question": "My dog is ____ than yours.",
+    "options": ["bigger", "biggest", "more big", "most big"],
+    "answer": "bigger",
+    "rule": "Comparative – 'bigger' ikki narsani taqqoslashda ishlatiladi."
+  },
+  {
+    "question": "We ____ known each other for years.",
+    "options": ["have", "has", "had", "are"],
+    "answer": "have",
+    "rule": "Present Perfect – 'have/has + V3' bilan ishlatiladi."
+  },
+  {
+    "question": "They ____ watching TV all evening.",
+    "options": ["were", "was", "are", "be"],
+    "answer": "were",
+    "rule": "Past Continuous – o'tmishda davom etgan ish."
+  },
+  {
+    "question": "She ____ to the cinema yesterday.",
+    "options": ["went", "goes", "has gone", "is going"],
+    "answer": "went",
+    "rule": "Past Simple – o'tgan zamonda sodir bo‘lgan ish."
+  },
+  {
+    "question": "It ____ raining when I woke up.",
+    "options": ["was", "were", "is", "be"],
+    "answer": "was",
+    "rule": "Past Continuous – o‘sha paytda davom etayotgan holat."
+  },
+  {
+    "question": "He ____ already done his homework.",
+    "options": ["has", "have", "had", "is"],
+    "answer": "has",
+    "rule": "Present Perfect – tugallangan ishni bildiradi."
+  },
+  {
+    "question": "We ____ going to play football after school.",
+    "options": ["are", "is", "was", "be"],
+    "answer": "are",
+    "rule": "'Be going to' – rejalashtirilgan kelajak."
+  },
+  {
+    "question": "You ____ speak loudly here. It's a library.",
+    "options": ["must not", "can", "should", "might"],
+    "answer": "must not",
+    "rule": "'Must not' – qat’iy taqiqlash."
+  },
+  {
+    "question": "This exercise is the ____ in the book.",
+    "options": ["hardest", "harder", "most hard", "more hard"],
+    "answer": "hardest",
+    "rule": "Superlative – 'the + -est' shaklida ishlatiladi."
+  },
+  {
+    "question": "They ____ a lot of rain this year.",
+    "options": ["have had", "has had", "had", "are having"],
+    "answer": "have had",
+    "rule": "Present Perfect – hozirgacha bo‘lgan tajriba."
+  },
+  {
+    "question": "I ____ not watching TV when you called.",
+    "options": ["was", "were", "am", "be"],
+    "answer": "was",
+    "rule": "Past Continuous – 'was/were + not + V-ing'."
+  },
+   {
+    "question": "He ____ not finished his project yet.",
+    "options": ["has", "have", "had", "is"],
+    "answer": "has",
+    "rule": "Present Perfect – hali tugallanmagan ishni bildiradi ('yet' bilan ishlatiladi)."
+  },
+  {
+    "question": "While we ____ dinner, the lights went out.",
+    "options": ["were having", "was having", "are having", "had"],
+    "answer": "were having",
+    "rule": "Past Continuous – o'tmishda davom etayotgan ish paytida boshqa ish sodir bo‘lgan."
+  },
+  {
+    "question": "I ____ going to learn Spanish next year.",
+    "options": ["am", "is", "are", "was"],
+    "answer": "am",
+    "rule": "'Be going to' – kelajakdagi reja yoki niyat."
+  },
+  {
+    "question": "You ____ wear a uniform at this school.",
+    "options": ["must", "can", "should", "might"],
+    "answer": "must",
+    "rule": "'Must' – majburiyatni bildiradi."
+  },
+  {
+    "question": "This restaurant is ____ than the old one.",
+    "options": ["better", "gooder", "more good", "best"],
+    "answer": "better",
+    "rule": "'Good' sifati 'better' shaklida taqqoslanadi."
+  },
+  {
+    "question": "She ____ seen that movie before.",
+    "options": ["has", "have", "had", "is"],
+    "answer": "has",
+    "rule": "Present Perfect – tajriba haqida gapirganda ishlatiladi."
+  },
+  {
+    "question": "They ____ playing football when it started to rain.",
+    "options": ["were", "was", "are", "is"],
+    "answer": "were",
+    "rule": "Past Continuous – ikki harakat bir paytda bo‘lganda ishlatiladi."
+  },
+  {
+    "question": "He ____ not going to buy that car.",
+    "options": ["is", "are", "was", "be"],
+    "answer": "is",
+    "rule": "'Be going to' – reja yoki niyatni bildiradi, 'is not' bilan inkor qilinadi."
+  },
+  {
+    "question": "You ____ eat breakfast every morning.",
+    "options": ["should", "must", "might", "can"],
+    "answer": "should",
+    "rule": "'Should' – maslahat berishda ishlatiladi."
+  },
+  {
+    "question": "This building is the ____ in the city.",
+    "options": ["tallest", "taller", "most tall", "more tall"],
+    "answer": "tallest",
+    "rule": "Superlative – 'the + -est' bilan ishlatiladi."
+  },
+  {
+    "question": "We ____ never visited London before.",
+    "options": ["have", "has", "had", "are"],
+    "answer": "have",
+    "rule": "Present Perfect – ilgari tajriba yo‘qligini bildiradi."
+  },
+  {
+    "question": "She ____ sleeping when the alarm rang.",
+    "options": ["was", "were", "is", "be"],
+    "answer": "was",
+    "rule": "Past Continuous – o'tmishda davom etayotgan harakatni bildiradi."
+  },
+  {
+    "question": "I ____ going to meet him later.",
+    "options": ["am", "is", "are", "be"],
+    "answer": "am",
+    "rule": "'Be going to' – kelajakdagi reja yoki uchrashuv."
+  },
+  {
+    "question": "You ____ not talk during the test.",
+    "options": ["must", "can", "should", "might"],
+    "answer": "must",
+    "rule": "'Must not' – qat’iy taqiqlashni bildiradi."
+  },
+  {
+    "question": "My car is ____ than your bike.",
+    "options": ["faster", "fastest", "more fast", "most fast"],
+    "answer": "faster",
+    "rule": "Comparative – 'faster' ikki narsani taqqoslaydi."
+  },
+  {
+    "question": "He ____ already done the washing.",
+    "options": ["has", "have", "had", "is"],
+    "answer": "has",
+    "rule": "Present Perfect – tugallangan ishni bildiradi."
+  },
+  {
+    "question": "They ____ watching a movie when I arrived.",
+    "options": ["were", "was", "are", "is"],
+    "answer": "were",
+    "rule": "Past Continuous – o'tmishda davom etayotgan ish."
+  },
+  {
+    "question": "I ____ going to call my parents tonight.",
+    "options": ["am", "is", "are", "was"],
+    "answer": "am",
+    "rule": "'Be going to' – hozir rejalashtirilgan kelajak."
+  },
+  {
+    "question": "You ____ not forget your homework again!",
+    "options": ["must", "can", "should", "might"],
+    "answer": "must",
+    "rule": "'Must' – kuchli zaruratni bildiradi."
+  },
+  {
+    "question": "This shop is the ____ one in town.",
+    "options": ["cheapest", "cheaper", "more cheap", "most cheap"],
+    "answer": "cheapest",
+    "rule": "Superlative – eng darajani bildiradi."
+  }
+    ],
+  
    }
+ 
   
 };
 function getLevels(){ return AZ_DATA.levels; }
 function getWords(level){ return AZ_DATA.words[level] || []; }
 function getGrammar(level){ return AZ_DATA.grammar[level] || {}; }
+
