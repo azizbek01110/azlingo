@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function(){
   // navbar toggle
   var hamb = document.getElementById('hamb');
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function(){
     hamb.addEventListener('click', function(){
       if(nav.style.display==='flex') nav.style.display='none'; else nav.style.display='flex';
     });
-    // hide nav when clicking outside on small screens
     document.addEventListener('click', function(e){
       if(window.innerWidth <= 900){
         if(!nav.contains(e.target) && e.target !== hamb){
@@ -16,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     });
   }
+
   // set active links
   document.querySelectorAll('.nav a').forEach(function(a){
     var href = a.getAttribute('href');
@@ -55,13 +54,11 @@ document.addEventListener('DOMContentLoaded', function(){
     var g = getGrammar(level)[topic];
     if(!g) return;
 
-    // structure-ni stringga aylantirish
     var structureStr = '';
     if(typeof g.structure === 'object'){
         if(Array.isArray(g.structure)){
-            structureStr = g.structure.join('<br>'); // array bo'lsa elementlarni br bilan ajratish
+            structureStr = g.structure.join('<br>');
         } else {
-            // object bo'lsa propertylarini chiqarish
             for(var key in g.structure){
                 if(g.structure.hasOwnProperty(key)){
                     structureStr += '<strong>' + key + '</strong>: ' + g.structure[key] + '<br>';
@@ -69,10 +66,9 @@ document.addEventListener('DOMContentLoaded', function(){
             }
         }
     } else {
-        structureStr = g.structure; // string bo'lsa shunchaki ishlatish
+        structureStr = g.structure;
     }
 
-    // HTML yaratish
     var html = '<h2>' + topic + ' — ' + level + '</h2>' +
                '<h3>Qoida (o\'zbekcha)</h3><p>' + g.rule_uz + '</p>' +
                '<h3>Structure</h3><p>' + structureStr + '</p>' +
@@ -126,29 +122,68 @@ document.addEventListener('DOMContentLoaded', function(){
     populate(getLevels()[0]);
     levelSel.addEventListener('change', function(){ populate(levelSel.value); });
     startBtn.addEventListener('click', function(){ startTest(levelSel.value, lessonSel.value); });
+
     var TEST = {q:[], i:0, score:0};
+
     function startTest(level, lesson){
       TEST.q = []; TEST.i=0; TEST.score=0;
       var words = getWords(level);
-      for(var i=0;i<10;i++){ var w = words[i % words.length]; TEST.q.push({type:'vocab', q:'Translate to Uzbek: '+w.en, a:w.uz}); }
       var topics = Object.keys(getGrammar(level));
-      for(var j=0;j<10;j++){ var t = topics[j % topics.length]; var g = getGrammar(level)[t]; var choices = shuffle(topics).slice(0,3); if(choices.indexOf(t)===-1) choices.push(t); TEST.q.push({type:'grammar', q:'Which topic matches this rule excerpt: '+g.rule_uz.substring(0,80)+'...', a:t, choices: shuffle(choices)}); }
+      for(var i=0;i<10;i++){ 
+        var w = words[i % words.length]; 
+        TEST.q.push({type:'vocab', q:'Translate to Uzbek: '+w.en, a:w.uz}); 
+      }
+      for(var j=0;j<10;j++){ 
+        var t = topics[j % topics.length]; 
+        var g = getGrammar(level)[t]; 
+        var choices = shuffle(topics).slice(0,3); 
+        if(choices.indexOf(t)===-1) choices.push(t); 
+        TEST.q.push({type:'grammar', q:'Which topic matches this rule excerpt: '+g.rule_uz.substring(0,80)+'...', a:t, choices: shuffle(choices)}); 
+      }
       document.getElementById('testArea').style.display='block';
       showQ();
     }
+
     function showQ(){
       var area = document.getElementById('testContent');
-      if(TEST.i >= TEST.q.length){ area.innerHTML = '<h3>Finished</h3><p>Score: '+TEST.score+' / '+TEST.q.length+'</p>'; return; }
+      if(TEST.i >= TEST.q.length){
+        var resultMsg = '';
+        if(TEST.score >= 16){
+          resultMsg = 'Tabriklaymiz! Siz keyingi etabga o‘tasiz. Ball: ' + TEST.score + ' / ' + TEST.q.length;
+        } else {
+          resultMsg = 'Afsus! Siz yiqildingiz va boshqa etabga o‘ta olmaysiz. Ball: ' + TEST.score + ' / ' + TEST.q.length;
+        }
+        area.innerHTML = '<h3>Natija</h3><p>' + resultMsg + '</p>';
+        return;
+      }
+
       var cur = TEST.q[TEST.i];
-      document.getElementById('testStage').textContent = 'Question '+(TEST.i+1)+' / '+TEST.q.length;
+      document.getElementById('testStage').textContent = 'Savol '+(TEST.i+1)+' / '+TEST.q.length;
       if(cur.type === 'vocab'){
-        area.innerHTML = '<p>'+cur.q+'</p><input id="ans" class="search"><div style="margin-top:8px"><button id="check" class="cta">Check</button></div><p id="fb" class="small"></p>';
-        document.getElementById('check').onclick = function(){ var val = document.getElementById('ans').value.trim().toLowerCase(); if(val === cur.a.toLowerCase()){ TEST.score++; document.getElementById('fb').textContent = "To'g'ri"; } else { document.getElementById('fb').textContent = "Noto'g'ri. Javob: "+cur.a; } TEST.i++; setTimeout(showQ,800); };
+        area.innerHTML = '<p>'+cur.q+'</p><input id="ans" class="search"><div style="margin-top:8px"><button id="check" class="cta">Tekshirish</button></div><p id="fb" class="small"></p>';
+        document.getElementById('check').onclick = function(){
+          var val = document.getElementById('ans').value.trim().toLowerCase();
+          if(val === cur.a.toLowerCase()){
+            TEST.score++;
+            document.getElementById('fb').textContent = "To‘g‘ri";
+          } else {
+            document.getElementById('fb').textContent = "Noto‘g‘ri. Javob: "+cur.a;
+          }
+          TEST.i++;
+          setTimeout(showQ,800);
+        };
       } else {
         area.innerHTML = '<p>'+cur.q+'</p><div id="opts">' + cur.choices.map(function(ch){ return '<button class="opt">'+ch+'</button>'; }).join('') + '</div>';
-        Array.from(area.querySelectorAll('.opt')).forEach(function(b){ b.addEventListener('click', function(){ if(b.textContent === cur.a) TEST.score++; TEST.i++; showQ(); }); });
+        Array.from(area.querySelectorAll('.opt')).forEach(function(b){
+          b.addEventListener('click', function(){
+            if(b.textContent === cur.a) TEST.score++;
+            TEST.i++;
+            showQ();
+          });
+        });
       }
     }
+
     function shuffle(a){ return a.sort(function(){ return Math.random()-0.5; }); }
   }
 
@@ -163,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function(){
         var lesson = document.getElementById('lessonSelect').value;
         var msg = document.getElementById('msg').value.trim();
         if(!name || !email || !msg){ alert('Iltimos barcha maydonlarni to\'ldiring'); return; }
-        var BOT = '7532731670:AAEiF8NhlgO0ZIUyQmcmpKwmJz5TPEi2nRU'; // AzLingoBot
+        var BOT = '7532731670:AAEiF8NhlgO0ZIUyQmcmpKwmJz5TPEi2nRU'; 
         var CHAT = '7861521765';
         var text = encodeURIComponent('AzLingo Contact\nName:'+name+'\nEmail:'+email+'\nLesson:'+lesson+'\nMessage:'+msg);
         if(BOT.indexOf('REPLACE') !== -1){ alert('Bot token o\'rnatilmagan. Kontakt ma\'lumotlarini email orqali yuborishingiz mumkin.'); return; }
